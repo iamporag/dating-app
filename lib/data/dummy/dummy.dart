@@ -1,123 +1,246 @@
 import '../models/profile_model.dart';
 
 class Dummy {
-  static const interests = [
-   
+    static const interests = [];
+  static const List<ProfileModel> discover = [
+    ProfileModel(
+        id: 1,
+        name: 'Payel',
+        profileImage:
+            "https://images.pexels.com/photos/2069243/pexels-photo-2069243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        age: 18,
+        country: "India",
+        city: "Kalkata",
+        university: "Kalkata University",
+        distanceInKilo: 100,
+        instituteId: 2,
+        profileCompleteProgress: 100,
+        activeStatus: true,
+        matches: [],
+        mediaUrls: [
+          "https://images.pexels.com/photos/2027130/pexels-photo-2027130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/2069243/pexels-photo-2069243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/1756472/pexels-photo-1756472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/1963075/pexels-photo-1963075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        ]),
+    ProfileModel(
+        id: 2,
+        name: 'Piangka',
+        profileImage:
+            "https://images.pexels.com/photos/616376/pexels-photo-616376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        age: 18,
+        country: "Bangladesh",
+        city: "Dhaka",
+        university: "Dhaka University",
+        distanceInKilo: 25,
+        instituteId: 2,
+        profileCompleteProgress: 100,
+        activeStatus: true,
+        matches: [],
+        mediaUrls: [
+          "https://images.pexels.com/photos/616376/pexels-photo-616376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/725458/pexels-photo-725458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        ]),
+    ProfileModel(
+        id: 3,
+        name: 'Malika',
+        profileImage:
+            "https://images.pexels.com/photos/1572348/pexels-photo-1572348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        age: 23,
+        country: "Singapore",
+        city: "Gallaxy",
+        university: "Singapore university",
+        distanceInKilo: 85,
+        instituteId: 2,
+        profileCompleteProgress: 100,
+        activeStatus: true,
+        matches: [],
+        mediaUrls: [
+          "https://images.pexels.com/photos/1642228/pexels-photo-1642228.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/1557843/pexels-photo-1557843.jpeg?auto=compress&cs=tinysrgb&w=400",
+          "https://images.pexels.com/photos/1446161/pexels-photo-1446161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/1580272/pexels-photo-1580272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        ]),
+    ProfileModel(
+        id: 4,
+        name: 'Janvi',
+        profileImage:
+            "https://images.pexels.com/photos/1468379/pexels-photo-1468379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        age: 21,
+        country: "Chaina",
+        city: "Beijing",
+        university: 'Chaina university',
+        distanceInKilo: 96,
+        instituteId: 2,
+        profileCompleteProgress: 100,
+        activeStatus: true,
+        matches: [],
+        mediaUrls: [
+          "https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/1758144/pexels-photo-1758144.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/899757/pexels-photo-899757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        ]),
+    ProfileModel(
+        id: 6,
+        name: 'Flowers',
+        profileImage:
+            "https://images.pexels.com/photos/1302436/pexels-photo-1302436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        age: 25,
+        country: "World",
+        city: "Center",
+        university: 'Center university',
+        distanceInKilo: 9999,
+        instituteId: 2,
+        profileCompleteProgress: 100,
+        activeStatus: true,
+        matches: [],
+        mediaUrls: [
+          "https://images.pexels.com/photos/1322444/pexels-photo-1322444.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/70850/butterflies-insect-bezkregowiec-macro-70850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/36729/tulip-flower-bloom-pink.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        ]),
   ];
 
 
-  static const List<ProfileModel> discover = [
-   ProfileModel(
-    id: 1,
-    name: 'Payel',
-    profileImage: "https://images.pexels.com/photos/2069243/pexels-photo-2069243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    age: 18,
-    country: "India",
-    city: "Kalkata",
-    university: "Kalkata University",
-    distanceInKilo: 100,
-    instituteId: 2,
-    profileCompleteProgress: 100,
-    activeStatus: true,
-    matches: [],
-    mediaUrls: [
-      "https://images.pexels.com/photos/2027130/pexels-photo-2027130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "https://images.pexels.com/photos/2069243/pexels-photo-2069243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "https://images.pexels.com/photos/1756472/pexels-photo-1756472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "https://images.pexels.com/photos/1963075/pexels-photo-1963075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    ]
-   ),
-   ProfileModel(
-    id: 2,
-    name: 'Piangka',
-    profileImage: "https://images.pexels.com/photos/616376/pexels-photo-616376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    age: 18,
-    country: "Bangladesh",
-    city: "Dhaka",
-    university: "Dhaka University",
-    distanceInKilo: 25,
-    instituteId: 2,
-    profileCompleteProgress: 100,
-    activeStatus: true,
-    matches: [],
-    mediaUrls: [
-      "https://images.pexels.com/photos/616376/pexels-photo-616376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "https://images.pexels.com/photos/725458/pexels-photo-725458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    ]
-   ),
-   ProfileModel(
-    id: 3,
-    name: 'Malika',
-    profileImage: "https://images.pexels.com/photos/1572348/pexels-photo-1572348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    age: 23,
-    country: "Singapore",
-    city: "Gallaxy",
-    university: "Singapore university",
-    distanceInKilo: 85,
-    instituteId: 2,
-    profileCompleteProgress: 100,
-    activeStatus: true,
-    matches: [],
-    mediaUrls: [
-      "https://images.pexels.com/photos/1642228/pexels-photo-1642228.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "https://images.pexels.com/photos/1557843/pexels-photo-1557843.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "https://images.pexels.com/photos/1446161/pexels-photo-1446161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "https://images.pexels.com/photos/1580272/pexels-photo-1580272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    ]
-   ),
-   ProfileModel(
-    id: 4,
-    name: 'Janvi',
-    profileImage: "https://images.pexels.com/photos/1468379/pexels-photo-1468379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    age: 21,
-    country: "Chaina",
-    city: "Beijing",
-    university: 'Chaina university',
-    distanceInKilo: 96,
-    instituteId: 2,
-    profileCompleteProgress: 100,
-    activeStatus: true,
-    matches: [],
-    mediaUrls: [
-      "https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "https://images.pexels.com/photos/1758144/pexels-photo-1758144.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "https://images.pexels.com/photos/899757/pexels-photo-899757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    ]
-   ),
 
-
-
-  //  ProfileModel(
-  //   id: 5,
-  //   name: 'Porn Star',
-  //   profileImage: "https://cdni.pornpics.de/1280/1/314/57128978/57128978_001_b558.jpg",
-  //   age: 19,
-  //   country: "USA",
-  //   city: "New York",
-  //   distanceInKilo: 1,
-  //   instituteId: 2,
-  //   profileCompleteProgress: 100,
-  //   activeStatus: true,
-  //   matches: [],
-  //   mediaUrls: [
-  //     "https://cdni.pornpics.de/1280/1/314/57128978/57128978_002_472f.jpg",
-  //     "https://cdni.pornpics.de/1280/1/314/57128978/57128978_003_5994.jpg",
-  //     "https://cdni.pornpics.de/1280/1/314/57128978/57128978_004_3c59.jpg",
-  //     "https://cdni.pornpics.de/1280/1/314/57128978/57128978_005_d2ce.jpg",
-  //     "https://cdni.pornpics.de/1280/1/314/57128978/57128978_006_7521.jpg",
-  //     "https://cdni.pornpics.de/1280/1/314/57128978/57128978_007_9f59.jpg",
-  //     "https://cdni.pornpics.de/1280/1/314/57128978/57128978_008_8540.jpg",
-  //     "https://cdni.pornpics.de/1280/1/314/57128978/57128978_009_9574.jpg",
-  //     "https://cdni.pornpics.de/1280/1/314/57128978/57128978_010_5c6e.jpg",
-  //     "https://cdni.pornpics.de/1280/1/314/57128978/57128978_011_2080.jpg",
-  //     "https://cdni.pornpics.de/1280/1/314/57128978/57128978_012_b24b.jpg",
-  //     "https://cdni.pornpics.de/1280/1/314/57128978/57128978_013_2f7b.jpg",
-  //     "https://cdni.pornpics.de/1280/1/314/57128978/57128978_014_647e.jpg",
-  //     "https://cdni.pornpics.de/1280/1/314/57128978/57128978_015_1065.jpg",
-  //     "https://cdni.pornpics.de/1280/1/314/57128978/57128978_001_b558.jpg",
-  //   ]
-  //  ),
-   
-  
-   ];
+  // static const List<ProfileModel> pompom = [
+  //   ProfileModel(
+  //       id: 1,
+  //       name: 'Payel',
+  //       profileImage:
+  //           "https://cdni.pornpics.com/1280/3/1/59533485/59533485_001_1fc5.jpg",
+  //       age: 18,
+  //       country: "India",
+  //       city: "Kalkata",
+  //       university: "Kalkata University",
+  //       distanceInKilo: 100,
+  //       instituteId: 2,
+  //       profileCompleteProgress: 100,
+  //       activeStatus: true,
+  //       matches: [],
+  //       mediaUrls: [
+  //         "https://cdni.pornpics.com/1280/3/1/59533485/59533485_002_b6ba.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/59533485/59533485_003_104d.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/59533485/59533485_004_4213.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/59533485/59533485_005_0fc8.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/59533485/59533485_006_18ce.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/59533485/59533485_007_b9b6.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/59533485/59533485_008_fc6b.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/59533485/59533485_009_5bde.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/59533485/59533485_006_18ce.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/59533485/59533485_007_b9b6.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/59533485/59533485_008_fc6b.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/59533485/59533485_009_5bde.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/59533485/59533485_006_18ce.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/59533485/59533485_007_b9b6.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/59533485/59533485_008_fc6b.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/59533485/59533485_009_5bde.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/59533485/59533485_010_2794.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/59533485/59533485_011_7329.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/59533485/59533485_012_3a67.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/59533485/59533485_011_7329.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/59533485/59533485_001_1fc5.jpg"
+  //       ]),
+  //   ProfileModel(
+  //       id: 2,
+  //       name: 'Piangka',
+  //       profileImage:
+  //           "https://cdni.pornpics.com/1280/3/1/61596918/61596918_001_9964.jpg",
+  //       age: 18,
+  //       country: "Bangladesh",
+  //       city: "Dhaka",
+  //       university: "Dhaka University",
+  //       distanceInKilo: 25,
+  //       instituteId: 2,
+  //       profileCompleteProgress: 100,
+  //       activeStatus: true,
+  //       matches: [],
+  //       mediaUrls: [
+  //         "https://cdni.pornpics.com/1280/3/1/61596918/61596918_002_69b9.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61596918/61596918_003_effa.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61596918/61596918_004_f0b7.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61596918/61596918_005_43d8.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61596918/61596918_006_4957.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61596918/61596918_007_be0b.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61596918/61596918_008_dff5.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61596918/61596918_009_2160.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61596918/61596918_010_1f5e.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61596918/61596918_011_7fa2.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61596918/61596918_001_9964.jpg",
+  //       ]),
+  //   ProfileModel(
+  //       id: 3,
+  //       name: 'Malika',
+  //       profileImage:
+  //           "https://cdni.pornpics.com/1280/3/1/61165691/61165691_004_2066.jpg",
+  //       age: 23,
+  //       country: "Singapore",
+  //       city: "Gallaxy",
+  //       university: "Singapore university",
+  //       distanceInKilo: 85,
+  //       instituteId: 2,
+  //       profileCompleteProgress: 100,
+  //       activeStatus: true,
+  //       matches: [],
+  //       mediaUrls: [
+  //         "https://cdni.pornpics.com/1280/3/1/61165691/61165691_005_70e8.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61165691/61165691_010_3867.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61165691/61165691_013_b6b3.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61165691/61165691_020_ee1f.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61165691/61165691_028_4999.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61165691/61165691_025_a2bc.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61165691/61165691_018_72de.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61165691/61165691_032_9c41.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61165691/61165691_039_3a40.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61165691/61165691_037_6d17.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61165691/61165691_030_6aae.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61165691/61165691_045_6d82.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61165691/61165691_050_d26e.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61165691/61165691_047_831c.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61165691/61165691_041_3517.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61165691/61165691_056_9a4c.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61165691/61165691_060_a404.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61165691/61165691_062_9b32.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61165691/61165691_054_f445.jpg",
+  //         "https://cdni.pornpics.com/1280/3/1/61165691/61165691_004_2066.jpg",
+  //       ]),
+  //   ProfileModel(
+  //       id: 4,
+  //       name: 'Janvi',
+  //       profileImage:
+  //           "https://images.pexels.com/photos/1468379/pexels-photo-1468379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  //       age: 21,
+  //       country: "Chaina",
+  //       city: "Beijing",
+  //       university: 'Chaina university',
+  //       distanceInKilo: 96,
+  //       instituteId: 2,
+  //       profileCompleteProgress: 100,
+  //       activeStatus: true,
+  //       matches: [],
+  //       mediaUrls: [
+  //         "https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  //         "https://images.pexels.com/photos/1758144/pexels-photo-1758144.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  //         "https://images.pexels.com/photos/899757/pexels-photo-899757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  //       ]),
+  //   ProfileModel(
+  //       id: 6,
+  //       name: 'Flowers',
+  //       profileImage:
+  //           "https://images.pexels.com/photos/1302436/pexels-photo-1302436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  //       age: 25,
+  //       country: "World",
+  //       city: "Center",
+  //       university: 'Center university',
+  //       distanceInKilo: 9999,
+  //       instituteId: 2,
+  //       profileCompleteProgress: 100,
+  //       activeStatus: true,
+  //       matches: [],
+  //       mediaUrls: [
+  //         "https://images.pexels.com/photos/1322444/pexels-photo-1322444.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  //         "https://images.pexels.com/photos/70850/butterflies-insect-bezkregowiec-macro-70850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  //         "https://images.pexels.com/photos/36729/tulip-flower-bloom-pink.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  //       ]),
+  // ];
 }

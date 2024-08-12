@@ -1,7 +1,10 @@
+// ignore_for_file: prefer_interpolation_to_compose_strings, prefer_adjacent_string_concatenation
+
 import 'package:appinio_swiper/appinio_swiper.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 import '../../data/dummy/dummy.dart';
 
@@ -13,6 +16,9 @@ class TinderCard extends StatelessWidget {
     final theme = Theme.of(context);
     // final layout = MediaQuery.of(context);
     return AppinioSwiper(
+        initialIndex: 0,
+        backgroundCardCount: 0,
+        backgroundCardScale: 0.0,
         loop: true,
         cardCount: Dummy.discover.length,
         onSwipeEnd: (previousIndex, targetIndex, activity) {},
@@ -26,7 +32,7 @@ class TinderCard extends StatelessWidget {
               children: [
                 CarouselSlider(
                   options: CarouselOptions(
-                    initialPage: 2,
+                      initialPage: 2,
                       autoPlay: true,
                       aspectRatio: 1 / 2,
                       viewportFraction: 1.0),
@@ -60,7 +66,6 @@ class TinderCard extends StatelessWidget {
                         // ),
                         // buildStatus(),
                         buildDiscoverInfo(index, theme),
-                        
                       ],
                     ),
                   ),
@@ -70,97 +75,100 @@ class TinderCard extends StatelessWidget {
   }
 
   Widget buildDiscoverInfo(int index, ThemeData theme) => Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Row(
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Text(
-                          Dummy.discover[index].name,
-                          style:const TextStyle(
-                              fontSize: 32,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
-                        ),
-                        SizedBox(
-                          width: 16,
-                        ),
-                        Text(
-                          Dummy.discover[index].age.toString(),
-                          style: TextStyle(fontSize: 32, color: Colors.white),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        const Icon(Icons.school_outlined),
-                        const SizedBox(
-                          width: 5,
-                        ),
-                        Text(
-                          "Studied in " +
-                              Dummy.discover[index].university.toString() +
-                              '.',
-                          style: theme.textTheme.bodySmall,
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        const Icon(Icons.home_outlined),
-                        const SizedBox(
-                          width: 5,
-                        ),
-                        Text(
-                          "Lives in " + Dummy.discover[index].city + ', ' + Dummy.discover[index].country + '.',
-                          style: theme.textTheme.bodySmall,
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        const Icon(Icons.location_on_outlined),
-                        const SizedBox(
-                          width: 5,
-                        ),
-                        Text(
-                          Dummy.discover[index].distanceInKilo.toString(),
-                          style: theme.textTheme.bodySmall,
-                        ),
-                        const SizedBox(
-                          width: 5,
-                        ),
-                        Text(
-                          "KM" + '.',
-                          style: theme.textTheme.bodySmall,
-                        ),
-                      ],
-                    ),
-                  ],
-                )
-              ],
-            ),
-            SizedBox(
-              width: 60,
-              height: 60,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(100),
-                child: CachedNetworkImage(
-                  imageUrl: Dummy.discover[index].profileImage,
-                  fit: BoxFit.cover,
-                ),
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            Dummy.discover[index].name,
+                            style: const TextStyle(
+                                fontSize: 32,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                          const Gap(16),
+                          Text(
+                            Dummy.discover[index].age.toString(),
+                            style: const TextStyle(
+                                fontSize: 32, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          const Icon(Icons.school_outlined),
+                          const SizedBox(
+                            width: 5,
+                          ),
+                          Text(
+                            "Studied in " +
+                                Dummy.discover[index].university.toString() +
+                                '.',
+                            style: theme.textTheme.bodySmall,
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          const Icon(Icons.home_outlined),
+                          const SizedBox(
+                            width: 5,
+                          ),
+                          Text(
+                            "Lives in " +
+                                Dummy.discover[index].city +
+                                ', ' +
+                                Dummy.discover[index].country +
+                                '.',
+                            style: theme.textTheme.bodySmall,
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          const Icon(Icons.location_on_outlined),
+                          const SizedBox(
+                            width: 5,
+                          ),
+                          Text(
+                            Dummy.discover[index].distanceInKilo.toString(),
+                            style: theme.textTheme.bodySmall,
+                          ),
+                          const SizedBox(
+                            width: 5,
+                          ),
+                          Text(
+                            "KM" + '.',
+                            style: theme.textTheme.bodySmall,
+                          ),
+                        ],
+                      ),
+                    ],
+                  )
+                ],
               ),
-            )
-          ],
-        ),
-      ],
-    );
+              SizedBox(
+                width: 60,
+                height: 60,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(100),
+                  child: CachedNetworkImage(
+                    imageUrl: Dummy.discover[index].profileImage,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              )
+            ],
+          ),
+        ],
+      );
 
   Widget buildName() => const Row(
         children: [
@@ -229,8 +237,8 @@ class TinderCard extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          const Icon(Icons.school_outlined),
-                          const SizedBox(
+                          Icon(Icons.school_outlined),
+                          SizedBox(
                             width: 5,
                           ),
                           Text("Studied in Dhaka University"),
@@ -238,8 +246,8 @@ class TinderCard extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          const Icon(Icons.school_outlined),
-                          const SizedBox(
+                          Icon(Icons.school_outlined),
+                          SizedBox(
                             width: 5,
                           ),
                           Text("Studied in Dhaka University"),
@@ -247,8 +255,8 @@ class TinderCard extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          const Icon(Icons.school_outlined),
-                          const SizedBox(
+                          Icon(Icons.school_outlined),
+                          SizedBox(
                             width: 5,
                           ),
                           Text("Studied in Dhaka University"),

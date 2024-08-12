@@ -1,11 +1,11 @@
-import 'package:dating_app/presentation/pages/discover_page.dart';
+
+import 'package:dating_app/presentation/pages/home_page.dart';
 import 'package:dating_app/presentation/pages/login_page.dart';
 import 'package:dating_app/presentation/widgets/screen_wrapper_page.dart';
 import 'package:dating_app/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../presentation/widgets/discover_card.dart';
 
 class AppPages {
   static final routes = GoRouter(routes: [
@@ -46,7 +46,7 @@ class AppPages {
      GoRoute(
     path: Routes.DISCOVER_ROUTE.path,
     name: Routes.DISCOVER_ROUTE.name,
-    pageBuilder: (context, state) => const MaterialPage(child: DiscoverPage()),
+    pageBuilder: (context, state) => const MaterialPage(child: HomePage()),
     ),
      GoRoute(
     path: Routes.SEARCH_ROUTE.path,
