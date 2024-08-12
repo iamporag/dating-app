@@ -8,15 +8,12 @@ class Profile extends StatelessWidget {
   Profile({super.key});
 
   final List<String> imageUrls = [
-    'https://cdni.pornpics.de/1280/5/38/51368089/51368089_003_7c8a.jpg',
-    'https://cdni.pornpics.de/1280/5/38/51368089/51368089_003_7c8a.jpg',
-    'https://cdni.pornpics.de/1280/5/38/51368089/51368089_003_7c8a.jpg',
-    'https://cdni.pornpics.de/1280/5/38/51368089/51368089_003_7c8a.jpg',
-    'https://cdni.pornpics.de/1280/5/38/51368089/51368089_003_7c8a.jpg',
-    'https://cdni.pornpics.de/1280/5/38/51368089/51368089_003_7c8a.jpg',
-
-
- 
+    'https://images.pexels.com/photos/912050/pexels-photo-912050.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    'https://images.pexels.com/photos/1115358/pexels-photo-1115358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    'https://images.pexels.com/photos/13501450/pexels-photo-13501450.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    'https://images.pexels.com/photos/2556279/station-train-transport-travel-2556279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    'https://images.pexels.com/photos/358220/pexels-photo-358220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    'https://images.pexels.com/photos/11935083/pexels-photo-11935083.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   ];
 
   @override
@@ -35,7 +32,7 @@ class Profile extends StatelessWidget {
                   decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: CachedNetworkImageProvider(
-                          'https://cdni.pornpics.de/1280/5/38/51368089/51368089_005_0fdf.jpg'),
+                          'https://images.pexels.com/photos/912050/pexels-photo-912050.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
                       fit: BoxFit.cover,
                     ),
                   ),
