@@ -18,10 +18,11 @@ class Dummy {
         activeStatus: true,
         matches: [],
         mediaUrls: [
+          "https://images.pexels.com/photos/1963075/pexels-photo-1963075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           "https://images.pexels.com/photos/2027130/pexels-photo-2027130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
           "https://images.pexels.com/photos/2069243/pexels-photo-2069243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
           "https://images.pexels.com/photos/1756472/pexels-photo-1756472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          "https://images.pexels.com/photos/1963075/pexels-photo-1963075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          
         ]),
     ProfileModel(
         id: 2,

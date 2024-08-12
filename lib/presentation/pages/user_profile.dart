@@ -29,6 +29,7 @@ class UserProfile extends StatelessWidget {
                   ),
                 ),
               ),
+              
               const Gap(10),
               const Row(
                 mainAxisSize: MainAxisSize.min,

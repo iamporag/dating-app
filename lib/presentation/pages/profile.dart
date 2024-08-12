@@ -1,111 +1,301 @@
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
 class Profile extends StatelessWidget {
-  const Profile({super.key});
+  Profile({super.key});
+
+  final List<String> imageUrls = [
+    'https://cdni.pornpics.de/1280/5/38/51368089/51368089_003_7c8a.jpg',
+    'https://cdni.pornpics.de/1280/5/38/51368089/51368089_003_7c8a.jpg',
+    'https://cdni.pornpics.de/1280/5/38/51368089/51368089_003_7c8a.jpg',
+    'https://cdni.pornpics.de/1280/5/38/51368089/51368089_003_7c8a.jpg',
+    'https://cdni.pornpics.de/1280/5/38/51368089/51368089_003_7c8a.jpg',
+    'https://cdni.pornpics.de/1280/5/38/51368089/51368089_003_7c8a.jpg',
+
+
+ 
+  ];
 
   @override
   Widget build(BuildContext context) {
+    int remainingImages = imageUrls.length - 5;
     return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
-          child: Column(
-            children: [
-              Align(
-                alignment: Alignment.center,
-                child: Container(
-                  width: 150,
-                  height: 150,
+      body: CustomScrollView(
+        physics: const ScrollPhysics(),
+        slivers: [
+          SliverToBoxAdapter(
+            child: Stack(
+              clipBehavior: Clip.none,
+              children: [
+                Container(
+                  height: 200,
                   decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
                     image: DecorationImage(
                       image: CachedNetworkImageProvider(
-                          "https://images.pexels.com/photos/27531110/pexels-photo-27531110/free-photo-of-turkish-coffee.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
+                          'https://cdni.pornpics.de/1280/5/38/51368089/51368089_005_0fdf.jpg'),
                       fit: BoxFit.cover,
                     ),
                   ),
-                ),
-              ),
-              const Gap(10),
-              const Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(
-                    "Sakib,",
-                    style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Gap(10),
-                  Text(
-                    "27",
-                    style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Gap(5),
-                  Icon(
-                    Icons.check_circle,
-                    color: Colors.blue,
-                    size: 23.0,
-                  ),
-                ],
-              ),
-              const Gap(10),
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Container(
-                    width: 80,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.grey.withOpacity(0.2),
-                    ),
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Icon(
-                              Icons.edit,
-                              size: 23,
-                            ),
-                            Gap(5),
-                            Text(
-                              "Edit",
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
+                  child: Container(
+                          height: MediaQuery.of(context).size.height,
+                          width: MediaQuery.of(context).size.width,
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                                colors: [
+                                  Colors.transparent,
+                                  Colors.black.withOpacity(0.9),
+                                ],
+                                stops: const [0.1,1.0],
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                ),
+                          ),
                         ),
-                      ],
+                ),
+                
+                const Positioned(
+                  bottom: -50,
+                  left: 16,
+                  right: 16,
+                  child: CircleAvatar(
+                    radius: 54,
+                    backgroundColor: Colors.blue,
+                    child: CircleAvatar(
+                      radius: 50,
+                      backgroundColor: Colors.black,
+                      child: CircleAvatar(
+                        radius: 48,
+                        backgroundImage: CachedNetworkImageProvider(
+                            'https://images.pexels.com/photos/4584578/pexels-photo-4584578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SliverToBoxAdapter(
+            child: Gap(60),
+          ),
+          const SliverToBoxAdapter(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  "Mr.X,",
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Gap(10),
+                Text(
+                  "27",
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Gap(5),
+                Icon(
+                  Icons.check_circle,
+                  color: Colors.blue,
+                  size: 23.0,
+                ),
+              ],
+            ),
+          ),
+          const SliverToBoxAdapter(
+            child: Gap(10),
+          ),
+          SliverToBoxAdapter(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(
+                  width: 80,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.grey.withOpacity(0.2),
+                  ),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(
+                            Icons.edit,
+                            size: 23,
+                          ),
+                          Gap(5),
+                          Text(
+                            "Edit",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                const Gap(10),
+                Container(
+                  width: 40,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.grey.withOpacity(0.2),
+                  ),
+                  child: const Icon(
+                    Icons.sentiment_satisfied,
+                    size: 23,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SliverToBoxAdapter(
+            child: Gap(10),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 20.0),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      width: 200,
+                      height: 200,
+                      color: Colors.transparent,
+                      child: GridView.builder(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 2, // 3 columns
+                                crossAxisSpacing: 5.0,
+                                mainAxisSpacing: 5.0,
+                                childAspectRatio: 1.2),
+                        itemCount: remainingImages > 0 ? 4 : imageUrls.length,
+                        itemBuilder: (context, index) {
+                          if (index == 3 && remainingImages > 0) {
+                            return GestureDetector(
+                                onTap: () {
+                                  // Navigate to full gallery on tap
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => FullImageGallery(
+                                        imageUrls: imageUrls,
+                                      ),
+                                    ),
+                                  );
+                                },
+                                child: Stack(
+                                  fit: StackFit.expand,
+                                  children: [
+                                    CachedNetworkImage(
+                                      imageUrl: imageUrls[index],
+                                      fit: BoxFit.cover,
+                                    ),
+                                    Container(
+                                      color: Colors.black.withOpacity(0.7),
+                                      child: Center(
+                                        child: Text(
+                                          '+ $remainingImages more',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 12.sp,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ));
+                          } else {
+                            return Image.network(
+                              imageUrls[index],
+                              fit: BoxFit.cover,
+                            );
+                          }
+                        },
+                      ),
                     ),
                   ),
                   const Gap(10),
-                  Container(
-                    width: 40,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.grey.withOpacity(0.2),
-                    ),
-                    child: const Icon(
-                      Icons.sentiment_satisfied,
-                      size: 23,
+                  Expanded(
+                    child: Container(
+                      width: 200,
+                      height: 200,
+                      color: Colors.transparent,
+                      child: GridView.builder(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 2, // 3 columns
+                                crossAxisSpacing: 5.0,
+                                mainAxisSpacing: 5.0,
+                                childAspectRatio: 1.2),
+                        itemCount: remainingImages > 0 ? 4 : imageUrls.length,
+                        itemBuilder: (context, index) {
+                          if (index == 3 && remainingImages > 0) {
+                            return GestureDetector(
+                              onTap: () {
+                                // Navigate to full gallery on tap
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => FullImageGallery(
+                                      imageUrls: imageUrls,
+                                    ),
+                                  ),
+                                );
+                              },
+                              child: Container(
+                                color: Colors.black.withOpacity(0.5),
+                                child: Center(
+                                  child: Text(
+                                    '+ $remainingImages more',
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            );
+                          } else {
+                            return Image.network(
+                              imageUrls[index],
+                              fit: BoxFit.cover,
+                            );
+                          }
+                        },
+                      ),
                     ),
                   ),
                 ],
               ),
-              const Spacer(),
-              Row(
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 20.0),
+              child: Row(
                 children: [
                   Expanded(
                     child: Container(
@@ -179,80 +369,120 @@ class Profile extends StatelessWidget {
                   ),
                 ],
               ),
-              const Gap(10),
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: 200,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  gradient: LinearGradient(
-                    begin: Alignment.topRight,
-                    end: Alignment.bottomLeft,
-                    stops: const [0.1, 0.9],
-                    colors: [
-                      Colors.pinkAccent.withOpacity(0.5),
-                      Colors.blueAccent.withOpacity(0.5),
-                    ],
-                  ),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 16.0, vertical: 20.0),
-                  child: Column(
-                    children: [
-                      const Spacer(),
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          gradient: const LinearGradient(
-                              begin: Alignment.bottomLeft,
-                              end: Alignment.topRight,
-                              stops: [
-                                0.1,
-                                0.9
-                              ],
-                              colors: [
-                                Colors.blueAccent,
-                                Colors.pinkAccent,
-                              ]),
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                        child: const Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Icon(Icons.energy_savings_leaf),
-                            Gap(5),
-                            Text("Activited Premium"),
-                          ],
-                        ),
-                      ),
-                      const Gap(10),
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                        child: const Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Icon(Icons.group_add,color: Colors.black,),
-                            Gap(5),
-                            Text("Get for Free",style: TextStyle(color: Colors.black),),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: 200,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  stops: const [0.1, 0.9],
+                  colors: [
+                    Colors.pinkAccent.withOpacity(0.5),
+                    Colors.blueAccent.withOpacity(0.5),
+                  ],
                 ),
               ),
-            ],
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 16.0, vertical: 20.0),
+                child: Column(
+                  children: [
+                    const Spacer(),
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                            begin: Alignment.bottomLeft,
+                            end: Alignment.topRight,
+                            stops: [
+                              0.1,
+                              0.9
+                            ],
+                            colors: [
+                              Colors.blueAccent,
+                              Colors.pinkAccent,
+                            ]),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(Icons.energy_savings_leaf),
+                          Gap(5),
+                          Text("Activited Premium"),
+                        ],
+                      ),
+                    ),
+                    const Gap(10),
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(
+                            Icons.group_add,
+                            color: Colors.black,
+                          ),
+                          Gap(5),
+                          Text(
+                            "Get for Free",
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
+          const SliverToBoxAdapter(
+            child: Gap(0),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class FullImageGallery extends StatelessWidget {
+  final List<String> imageUrls;
+
+  FullImageGallery({required this.imageUrls});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Full Image Gallery'),
+      ),
+      body: GridView.builder(
+        padding: EdgeInsets.all(10.0),
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3, // 3 columns
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
         ),
+        itemCount: imageUrls.length,
+        itemBuilder: (context, index) {
+          return Image.network(
+            imageUrls[index],
+            fit: BoxFit.cover,
+          );
+        },
       ),
     );
   }

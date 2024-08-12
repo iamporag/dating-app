@@ -21,26 +21,6 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return BlocBuilder<NavBloc, NavState>(builder: (context, state) {
       return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-      title: const Row(
-        children: [
-          Icon(
-            Icons.local_fire_department_rounded,
-            color: Colors.red,
-            size: 32,
-          ),
-          SizedBox(
-            width: 4,
-          ),
-          Text(
-            "Dating App",
-            style: TextStyle(
-                fontSize: 21, fontWeight: FontWeight.bold, color: Colors.red),
-          )
-        ],
-      ),
-        ),
         bottomNavigationBar: Container(
             color: Theme.of(context).colorScheme.onSecondaryFixed,
             child: Padding(
@@ -96,7 +76,7 @@ Widget buildPage(int index) {
     ),
     const MatchNew(),
     Message(),
-    const Profile(),
+    Profile(),
   ];
   return _widget[index];
 }
