@@ -108,7 +108,7 @@ class Message extends StatelessWidget {
                       CircleAvatar(
                         radius: 30,
                         backgroundImage: CachedNetworkImageProvider(
-                            "https://cdni.pornpics.de/1280/5/38/51368089/51368089_007_a34a.jpg"),
+                            "https://images.pexels.com/photos/4584578/pexels-photo-4584578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
                       ),
                       Padding(
                         padding: EdgeInsets.only(
