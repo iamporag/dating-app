@@ -95,32 +95,33 @@ class Message extends StatelessWidget {
           ),
           SliverToBoxAdapter(
             child: SizedBox(
-              height: 85,
+              height: 95,
               child: ListView.separated(
                 physics: const BouncingScrollPhysics(),
                 shrinkWrap: true,
                 controller: ScrollController(),
-                padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                padding: const EdgeInsets.only(left: 20.0, right: 20.0,),
                 scrollDirection: Axis.horizontal,
                 itemCount: 10,
                 separatorBuilder: (context, index) => const Gap(20),
                 itemBuilder: (context, index) {
-                  return const Column(
-                    children: [
-                      CircleAvatar(
-                        radius: 30,
-                        backgroundImage: CachedNetworkImageProvider(
-                            "https://images.pexels.com/photos/4584578/pexels-photo-4584578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(
-                            left: 5.0, right: 5.0, top: 2.0, bottom: 2.0),
-                        child: Text(
+                  return InkWell(
+                    onTap: () {
+                      
+                    },
+                    child: const Column(
+                      children: [
+                        CircleAvatar(
+                          radius: 35,
+                          backgroundImage: CachedNetworkImageProvider(
+                              "https://images.pexels.com/photos/4584578/pexels-photo-4584578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
+                        ),
+                        Text(
                           "Sakib",
                           style: TextStyle(fontSize: 14),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   );
                 },
               ),

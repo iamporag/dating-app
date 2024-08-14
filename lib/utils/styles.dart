@@ -1,4 +1,4 @@
-// ignore_for_file: constant_identifier_names, non_constant_identifier_names, prefer_const_constructors
+// ignore_for_file: constant_identifier_names, non_constant_identifier_names, prefer_const_constructors, use_full_hex_values_for_flutter_colors
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -13,6 +13,7 @@ class Styles {
   static const Color LIGHT_BG = Color(0xffffffff);
   static const Color LIGHT_BG_VARIANT = Color(0x28ff77b2);
   static const Color ON_LIGHT_BG = Color(0xff232222);
+  static const Color ON_LIGHT_VARIANT = Color(4282532427);
 
   static ThemeData APP_THEME_LIGHT = ThemeData(
     primaryColor: PRIMARY_COLOR,
@@ -71,6 +72,7 @@ class Styles {
       onError: PRIMARY_GRADIENT,
       surface: DARK_BG,
       onSurface: ON_DARK_BG,
+      outline: ON_LIGHT_VARIANT,
     ),
     textTheme: TextTheme(
       titleLarge: TextStyle(

@@ -13,6 +13,8 @@ class Routes {
   static const CHAT_ROUTE = Route(path: '/chat/:id', name: 'chat');
   static const INBOX_ROUTE = Route(path: '/inbox', name: 'inbox');
   static const PROFILE_ROUTE = Route(path: '/profile', name: 'profile');
+  // static const PROFILE_EDIT_ROUTE = "/profile_edit";
+  static const PROFILE_EDIT_ROUTE = Route(path: '/profile_edit', name: 'profile edit');
   static const NOTIFICATIONS_ROUTE = Route(path: '/notifications', name: 'notifications');
 }
 

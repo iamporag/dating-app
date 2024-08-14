@@ -10,6 +10,9 @@ import 'package:dating_app/presentation/widgets/profile_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../routes/routes.dart';
 
 class DiscoverNewPage extends StatefulWidget {
   final List<ProfileModel> profiles;
@@ -47,18 +50,18 @@ class _DiscoverNewPageState extends State<DiscoverNewPage> {
           body: CustomScrollView(
             slivers: [
               SliverAppBar(
-            title: Text(
-              "Dating App",
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    color: Theme.of(context).primaryColor,
-                  ),
-            ),
-            floating: true,
-            pinned: true,
-          ),
-          const SliverToBoxAdapter(
-            child: Gap(30),
-          ),
+                title: Text(
+                  "Dating App",
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        color: Theme.of(context).primaryColor,
+                      ),
+                ),
+                floating: true,
+                pinned: true,
+              ),
+              const SliverToBoxAdapter(
+                child: Gap(30),
+              ),
               SliverToBoxAdapter(
                 child: SizedBox(
                   height: layout.size.height * 0.75,
@@ -326,11 +329,7 @@ class _DiscoverNewPageState extends State<DiscoverNewPage> {
                                     trailing: InkWell(
                                       borderRadius: BorderRadius.circular(100),
                                       onTap: () {
-                                        Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const UserProfile()));
+                                        context.pushNamed(Routes.LOGIN_ROUTE.name);
                                       },
                                       child: Container(
                                         width: 60,

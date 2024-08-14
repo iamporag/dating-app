@@ -1,8 +1,11 @@
-
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:dating_app/routes/app_pages.dart';
+import 'package:dating_app/routes/routes.dart';
+import 'package:dating_app/utils/config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 
 class Profile extends StatelessWidget {
   Profile({super.key});
@@ -37,22 +40,21 @@ class Profile extends StatelessWidget {
                     ),
                   ),
                   child: Container(
-                          height: MediaQuery.of(context).size.height,
-                          width: MediaQuery.of(context).size.width,
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                                colors: [
-                                  Colors.transparent,
-                                  Colors.black.withOpacity(0.9),
-                                ],
-                                stops: const [0.1,1.0],
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                                ),
-                          ),
-                        ),
+                    height: MediaQuery.of(context).size.height,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Colors.transparent,
+                          Colors.black.withOpacity(0.9),
+                        ],
+                        stops: const [0.1, 1.0],
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                      ),
+                    ),
+                  ),
                 ),
-                
                 const Positioned(
                   bottom: -50,
                   left: 16,
@@ -121,25 +123,28 @@ class Profile extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.grey.withOpacity(0.2),
                   ),
-                  child: const Row(
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Icon(
-                            Icons.edit,
-                            size: 23,
-                          ),
-                          Gap(5),
-                          Text(
-                            "Edit",
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
+                      InkWell(
+                        onTap: () => context.pushNamed(Routes.PROFILE_EDIT_ROUTE.name),
+                        child: const Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(
+                              Icons.edit,
+                              size: 23,
                             ),
-                          ),
-                        ],
+                            Gap(5),
+                            Text(
+                              "Edit",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
