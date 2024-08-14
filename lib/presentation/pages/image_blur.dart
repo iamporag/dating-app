@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'dart:ui';
 
 class OverlayBlurImageExample extends StatelessWidget {
+  const OverlayBlurImageExample({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Overlay Blur Image Example'),
+          title: const Text('Overlay Blur Image Example'),
         ),
         body: GridView.builder(
           clipBehavior: Clip.hardEdge,
@@ -34,7 +36,7 @@ class OverlayBlurImageExample extends StatelessWidget {
   }
 }
 
-void main() => runApp(MaterialApp(home: OverlayBlurImageExample()));
+void main() => runApp(const MaterialApp(home: OverlayBlurImageExample()));
 
 
 

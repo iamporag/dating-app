@@ -75,7 +75,7 @@ Widget buildPage(int index) {
       profiles: Dummy.discover,
     ),
     const MatchNew(),
-    Message(),
+    const Message(),
     Profile(),
   ];
   return _widget[index];

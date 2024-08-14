@@ -40,6 +40,8 @@
 //     );
 //   }
 
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -52,7 +54,7 @@ class Message extends StatelessWidget {
     return Scaffold(
       // appBar: AppBar(),
       body: CustomScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         slivers: [
           SliverAppBar(
             title: Text(

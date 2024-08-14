@@ -458,17 +458,17 @@ class Profile extends StatelessWidget {
 class FullImageGallery extends StatelessWidget {
   final List<String> imageUrls;
 
-  FullImageGallery({required this.imageUrls});
+  const FullImageGallery({super.key, required this.imageUrls});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Full Image Gallery'),
+        title: const Text('Full Image Gallery'),
       ),
       body: GridView.builder(
-        padding: EdgeInsets.all(10.0),
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        padding: const EdgeInsets.all(10.0),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3, // 3 columns
           crossAxisSpacing: 10,
           mainAxisSpacing: 10,
